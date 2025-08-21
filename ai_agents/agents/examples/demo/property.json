@@ -2856,12 +2856,19 @@
             {
               "type": "extension",
               "name": "tts",
-              "addon": "azure_tts",
+              "addon": "elevenlabs_tts_python",
               "extension_group": "tts",
               "property": {
-                "azure_subscription_key": "${env:AZURE_TTS_KEY}",
-                "azure_subscription_region": "${env:AZURE_TTS_REGION}",
-                "azure_synthesis_voice_name": "en-US-AndrewMultilingualNeural"
+                "api_key": "${env:ELEVENLABS_TTS_KEY}",
+                "base_url": "",
+                "model_id": "eleven_multilingual_v2",
+                "optimize_streaming_latency": 0,
+                "prompt": "",
+                "request_timeout_seconds": 30,
+                "similarity_boost": 0.75,
+                "speaker_boost": false,
+                "stability": 0.5,
+                "voice_id": "pNInz6obpgDQGcFmaJgB"
               }
             },
             {
@@ -2890,8 +2897,9 @@
             {
               "type": "extension",
               "name": "adapter",
+              "addon": "data_adapter_python",
               "extension_group": "default",
-              "addon": "data_adapter_python"
+              "property": {}
             }
           ],
           "connections": [

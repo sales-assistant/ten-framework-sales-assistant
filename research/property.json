@@ -1,4 +1,5 @@
 {
+  "_comment": "clean running copy of property.json",
   "ten": {
     "predefined_graphs": [
       {
@@ -49,11 +50,11 @@
                 "api_key": "${env:OPENAI_API_KEY}",
                 "base_url": "",
                 "frequency_penalty": 0.9,
-                "greeting": "How can I help you today?",
+                "greeting": "TEN Agent connected. How can I help you today?",
                 "max_memory_length": 10,
                 "max_tokens": 512,
                 "model": "${env:OPENAI_MODEL}",
-                "prompt": "You are a sales person in a retail store and your user is the costumer.",
+                "prompt": "",
                 "proxy_url": "${env:OPENAI_PROXY_URL}"
               }
             },
@@ -93,15 +94,6 @@
               "type": "extension",
               "name": "weatherapi_tool_python",
               "addon": "weatherapi_tool_python",
-              "extension_group": "default",
-              "property": {
-                "api_key": "${env:WEATHERAPI_API_KEY|}"
-              }
-            },
-            {
-              "type": "extension",
-              "name": "dummy_tool_python",
-              "addon": "dummy_tool_python",
               "extension_group": "default",
               "property": {
                 "api_key": "${env:WEATHERAPI_API_KEY|}"
@@ -177,14 +169,6 @@
                   "dest": [
                     {
                       "extension": "weatherapi_tool_python"
-                    }
-                  ]
-                },
-                {
-                  "name": "tool_call",
-                  "dest": [
-                    {
-                      "extension": "dummy_tool_python"
                     }
                   ]
                 }
@@ -272,19 +256,6 @@
             },
             {
               "extension": "weatherapi_tool_python",
-              "cmd": [
-                {
-                  "name": "tool_register",
-                  "dest": [
-                    {
-                      "extension": "llm"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "extension": "dummy_tool_python",
               "cmd": [
                 {
                   "name": "tool_register",

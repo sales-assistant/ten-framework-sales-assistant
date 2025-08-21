@@ -65,6 +65,11 @@
     },
     {
       "type": "extension",
+      "name": "dummy_tool_python",
+      "version": "=0.1.0"
+    },
+    {
+      "type": "extension",
       "name": "deepgram_asr_python",
       "version": "=0.1.0"
     },
